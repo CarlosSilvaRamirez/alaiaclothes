@@ -7,8 +7,8 @@ const mobileMenu = document.getElementById("mobileMenu");
 
 if (menuBtn && mobileMenu) {
   menuBtn.addEventListener("click", () => {
-    const open = mobileMenu.hasAttribute("hidden") ? false : true;
-    if (open) {
+    const isOpen = !mobileMenu.hasAttribute("hidden");
+    if (isOpen) {
       mobileMenu.setAttribute("hidden", "");
       menuBtn.setAttribute("aria-expanded", "false");
     } else {
@@ -17,7 +17,6 @@ if (menuBtn && mobileMenu) {
     }
   });
 
-  // cerrar menú al clicar un link
   mobileMenu.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
       mobileMenu.setAttribute("hidden", "");
@@ -44,7 +43,7 @@ const before = document.getElementById("baBefore");
 const divider = document.getElementById("baDivider");
 
 function setBA(v) {
-  const pct = Math.max(0, Math.min(100, v));
+  const pct = Math.max(0, Math.min(100, Number(v)));
   before.style.width = pct + "%";
   divider.style.left = pct + "%";
 }

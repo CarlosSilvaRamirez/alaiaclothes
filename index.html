@@ -7,7 +7,7 @@
   <meta name="description" content="ALAIA API: Probador Virtual con IA para e-commerce. Aumenta ventas y reduce devoluciones con try-on y colorimetría." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -16,11 +16,12 @@
   <header class="nav">
     <div class="container nav__inner">
       <a class="brand" href="#top" aria-label="ALAIA Home">
-        <span class="brand__name">Ala<span class="brand__dot">.</span>ia</span>
+        <span class="brand__name">ALAIA</span><span class="brand__dot">.</span>
       </a>
 
       <nav class="nav__links" aria-label="Navegación principal">
         <a href="#features">Características</a>
+        <a href="#impact">Impacto</a>
         <a href="#demo">Demo</a>
         <a href="#pricing">Precios</a>
         <a href="#docs">API Docs</a>
@@ -28,7 +29,6 @@
 
       <div class="nav__actions">
         <button class="icon-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
-          <!-- hamburger -->
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
@@ -41,6 +41,7 @@
     <div class="mobile" id="mobileMenu" hidden>
       <div class="container mobile__inner">
         <a href="#features">Características</a>
+        <a href="#impact">Impacto</a>
         <a href="#demo">Demo</a>
         <a href="#pricing">Precios</a>
         <a href="#docs">API Docs</a>
@@ -68,8 +69,7 @@
 
           <div class="hero__cta">
             <a class="btn btn--solid" href="#demo">
-              Ver Demo en Vivo
-              <span class="btn__icon">→</span>
+              Ver Demo en Vivo <span class="btn__icon">→</span>
             </a>
             <a class="btn btn--outline" href="#docs">Leer Documentación</a>
           </div>
@@ -78,6 +78,7 @@
             <span>✓ Reduce devoluciones</span>
             <span>✓ Aumenta conversión</span>
             <span>✓ Créditos por uso</span>
+            <span>✓ Multi-prenda (upper + lower)</span>
           </div>
         </div>
 
@@ -90,7 +91,7 @@
               <div class="mock__frame">
                 <div class="silhouette"></div>
               </div>
-              <div class="mock__note">Sube una foto (frontal) y ALAIA procesa la pose.</div>
+              <div class="mock__note">Sube una foto frontal. ALAIA detecta pose y prepara la generación.</div>
             </div>
 
             <div class="mock__mid">
@@ -98,11 +99,12 @@
                 <span class="zap">⚡</span> IA Try-On
               </div>
               <div class="mock__arrow">→</div>
+              <div class="mock__tiny">API /v1/tryon</div>
             </div>
 
             <div class="mock__col">
               <div class="mock__tag mock__tag--after">AFTER</div>
-              <div class="mock__title">Usuario con tu prenda</div>
+              <div class="mock__title">Usuario con tu outfit</div>
               <div class="mock__frame">
                 <div class="outfit">
                   <div class="outfit__top"></div>
@@ -126,15 +128,14 @@
     <section id="features" class="section section--white">
       <div class="container">
         <div class="head reveal">
-          <div class="eyebrow">Beneficios del MVP</div>
-          <h2>Diseñado para convertir visitas en compras</h2>
-          <p>Menos fricción, más confianza. Un probador virtual API-first para equipos de e-commerce y devs.</p>
+          <div class="eyebrow">Características</div>
+          <h2>Lo que hace ALAIA diferente</h2>
+          <p>Un probador virtual pensado para conversión (negocio) y velocidad (devs).</p>
         </div>
 
         <div class="grid3">
           <article class="card reveal">
             <div class="icon">
-              <!-- layers icon -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M12 3 3 8l9 5 9-5-9-5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                 <path d="M3 12l9 5 9-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -148,20 +149,18 @@
 
           <article class="card reveal" style="--delay:.06s;">
             <div class="icon">
-              <!-- palette icon -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="M12 22c5.523 0 10-4.03 10-9s-4.477-10-10-10S2 7.477 2 13c0 3.866 2.686 7 6 7h1a2 2 0 0 1 2 2Z" stroke="currentColor" stroke-width="2"/>
                 <path d="M7.5 10.5h.01M12 9h.01M16.5 11.5h.01M9 15h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
               </svg>
             </div>
             <h3>Colorimetría IA</h3>
-            <p>Analiza el tono de piel y recomienda colores ideales (Invierno, Verano, etc). Marca ⭐ IDEAL automáticamente.</p>
+            <p>Analiza tono de piel y recomienda colores ideales (Invierno, Verano, etc). Marca ⭐ IDEAL automáticamente.</p>
             <div class="linkish">Ver cómo funciona →</div>
           </article>
 
           <article class="card reveal" style="--delay:.12s;">
             <div class="icon">
-              <!-- code icon -->
               <svg viewBox="0 0 24 24" fill="none">
                 <path d="m16 18 6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="m8 6-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -172,6 +171,52 @@
             <div class="linkish">Ver cómo funciona →</div>
           </article>
         </div>
+
+        <div class="bullets reveal" style="--delay:.10s;">
+          <div class="bullet">✓ Motor de fusión para outfits completos</div>
+          <div class="bullet">✓ Sistema de créditos (1 crédito = 1 try-on)</div>
+          <div class="bullet">✓ Panel para inventario (upper/lower/dress)</div>
+          <div class="bullet">✓ Recomendaciones “⭐ IDEAL” por colorimetría</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="section section--white" id="impact">
+      <div class="container">
+        <div class="head reveal">
+          <div class="eyebrow">Impacto</div>
+          <h2>Más confianza = más compras</h2>
+          <p>ALAIA reduce la incertidumbre del cliente y mejora la decisión de compra con visualización + recomendaciones.</p>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal">
+            <div class="stat__n">+15%</div>
+            <div class="stat__t">Conversión estimada</div>
+            <div class="stat__p">Cuando el usuario “se ve con la prenda”, compra con mayor seguridad.</div>
+          </div>
+          <div class="stat reveal" style="--delay:.06s;">
+            <div class="stat__n">-20%</div>
+            <div class="stat__t">Devoluciones</div>
+            <div class="stat__p">Menos errores por talla/estilo al visualizar el outfit antes de pagar.</div>
+          </div>
+          <div class="stat reveal" style="--delay:.12s;">
+            <div class="stat__n">Minutos</div>
+            <div class="stat__t">Integración</div>
+            <div class="stat__p">API-first. Endpoint único para probar prendas (upper/lower/dress).</div>
+          </div>
+        </div>
+
+        <div class="logos reveal">
+          <span class="logos__text">Compatible con:</span>
+          <div class="logos__row">
+            <span class="logoPill">Shopify</span>
+            <span class="logoPill">WooCommerce</span>
+            <span class="logoPill">Custom</span>
+            <span class="logoPill">Headless</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -179,7 +224,7 @@
     <section id="demo" class="section section--light">
       <div class="container">
         <div class="head reveal">
-          <div class="eyebrow">Demo (simulada)</div>
+          <div class="eyebrow">Demo</div>
           <h2>Una experiencia lista para integrarse</h2>
           <p>Subir foto → elegir prendas → generar outfit. Con etiquetas ⭐ IDEAL por colorimetría.</p>
         </div>
@@ -211,7 +256,7 @@
                 <div class="action">
                   <div class="token">⚡ 1 crédito</div>
                   <button class="btn btn--solid btn--block" type="button">Generar Outfit</button>
-                  <div class="demoCard__note center">Polo + Pantalón → 1 imagen</div>
+                  <div class="demoCard__note center">Upper + Lower → 1 imagen final</div>
                 </div>
               </div>
 
@@ -242,6 +287,13 @@
                 <div class="demoCard__note">⭐ IDEAL basado en tono de piel.</div>
               </div>
             </div>
+
+            <div class="miniRow">
+              <div class="miniBox">⚙️ Logs de generación</div>
+              <div class="miniBox">🔁 Webhooks</div>
+              <div class="miniBox">📦 Inventario</div>
+              <div class="miniBox">🔐 API Keys</div>
+            </div>
           </div>
 
           <div class="panel reveal" style="--delay:.08s;">
@@ -253,25 +305,55 @@
               <div class="badge badge--blue">Slider</div>
             </div>
 
-            <!-- Slider -->
             <div class="ba">
               <div class="ba__frame" id="baFrame">
                 <div class="ba__after">
-                  <div class="ba__mock">DESPUÉS (Outfit)</div>
+                  <div class="ba__label ba__label--right">DESPUÉS</div>
+                  <div class="ba__mock">Outfit generado</div>
                 </div>
+
                 <div class="ba__before" id="baBefore">
-                  <div class="ba__mock">ANTES (Foto)</div>
+                  <div class="ba__label ba__label--left">ANTES</div>
+                  <div class="ba__mock">Foto original</div>
                 </div>
+
                 <div class="ba__divider" id="baDivider" aria-hidden="true"></div>
               </div>
 
               <input id="baRange" class="ba__range" type="range" min="0" max="100" value="55" aria-label="Comparación antes y después" />
-              <div class="ba__labels">
-                <span>Antes</span><span>Después</span>
-              </div>
+              <div class="ba__labels"><span>Antes</span><span>Después</span></div>
             </div>
 
             <p class="miniNote">Tip: reemplaza estos placeholders por imágenes reales cuando tengas samples de tu IA.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section--white" id="how">
+      <div class="container">
+        <div class="head reveal">
+          <div class="eyebrow">Cómo funciona</div>
+          <h2>3 pasos. Cero fricción.</h2>
+          <p>Diseñado para que el equipo técnico lo integre rápido y el negocio vea resultados.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__num">1</div>
+            <div class="step__h">Sube foto</div>
+            <div class="step__p">El usuario carga una foto frontal. ALAIA detecta pose y prepara el try-on.</div>
+          </div>
+          <div class="step reveal" style="--delay:.06s;">
+            <div class="step__num">2</div>
+            <div class="step__h">Elige prendas</div>
+            <div class="step__p">Selecciona upper/lower/dress y combina outfit completo con motor de fusión.</div>
+          </div>
+          <div class="step reveal" style="--delay:.12s;">
+            <div class="step__num">3</div>
+            <div class="step__h">Genera + recomienda</div>
+            <div class="step__p">Devuelve imagen final + estación de colorimetría + etiquetas ⭐ IDEAL.</div>
           </div>
         </div>
       </div>
@@ -354,17 +436,18 @@
               Endpoints simples, logs claros y un flujo pensado para devs: subir imagen, seleccionar prendas,
               generar try-on y devolver resultados listos para tu frontend.
             </p>
+
             <div class="docs__cta" id="cta">
-              <a class="btn btn--solid" href="#">
-                Crear cuenta <span class="btn__icon">→</span>
+              <a class="btn btn--solid" href="https://wa.me/51913083820" target="_blank" rel="noreferrer">
+                Hablar por WhatsApp <span class="btn__icon">→</span>
               </a>
-              <a class="btn btn--outlineDark" href="#">Agendar demo (15 min)</a>
+              <a class="btn btn--outlineDark" href="#pricing">Ver planes</a>
             </div>
-            <div class="fine">* Cambia estos links por tus URLs reales cuando tengas auth/listo.</div>
+
+            <div class="fine">Respuesta rápida por WhatsApp: atención comercial y soporte de integración.</div>
           </div>
 
-          <pre class="code">
-POST /v1/tryon
+          <pre class="code">POST /v1/tryon
 {
   "user_image": "...",
   "items": [
@@ -377,8 +460,7 @@ POST /v1/tryon
   "result_image": "...",
   "season": "Invierno",
   "ideal_items": ["polo_123","pant_777"]
-}
-          </pre>
+}</pre>
         </div>
       </div>
     </section>
@@ -387,13 +469,18 @@ POST /v1/tryon
     <footer class="footer">
       <div class="container footer__inner">
         <div>
-          <div class="footer__brand">ALA<span class="brand__dot">.</span>IA</div>
+          <div class="footer__brand">ALAIA<span class="brand__dot">.</span></div>
           <p class="footer__p">Virtual Try-On API para e-commerce. Aumenta ventas y reduce devoluciones con IA.</p>
+
+          <div class="footer__ctaRow">
+            <a class="btn btn--solid btn--small" href="https://wa.me/51913083820" target="_blank" rel="noreferrer">WhatsApp 1</a>
+            <a class="btn btn--soft btn--small" href="https://wa.me/51938177206" target="_blank" rel="noreferrer">WhatsApp 2</a>
+          </div>
+
           <div class="social">
-            <a href="#" aria-label="Twitter">𝕏</a>
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="GitHub">⌂</a>
-            <a href="mailto:hello@alaia.ai" aria-label="Email">@</a>
+            <a href="https://www.tiktok.com/@alaiaclothes" target="_blank" rel="noreferrer" aria-label="TikTok">tt</a>
+            <a href="https://www.instagram.com/alaia_clothes/" target="_blank" rel="noreferrer" aria-label="Instagram">ig</a>
+            <a href="https://www.facebook.com/profile.php?id=61586365471250" target="_blank" rel="noreferrer" aria-label="Facebook">fb</a>
           </div>
         </div>
 
@@ -401,20 +488,21 @@ POST /v1/tryon
           <div>
             <div class="footer__h">Producto</div>
             <a href="#features">Características</a>
+            <a href="#impact">Impacto</a>
             <a href="#demo">Demo</a>
             <a href="#pricing">Precios</a>
           </div>
           <div>
             <div class="footer__h">Developers</div>
             <a href="#docs">API Docs</a>
-            <a href="#">Status</a>
-            <a href="#">Changelog</a>
+            <a href="#how">Cómo funciona</a>
+            <a href="#cta">Obtener API Key</a>
           </div>
           <div>
-            <div class="footer__h">Legal</div>
-            <a href="#">Privacidad</a>
-            <a href="#">Términos</a>
-            <a href="#">Contacto</a>
+            <div class="footer__h">Contacto</div>
+            <a href="https://wa.me/51913083820" target="_blank" rel="noreferrer">WhatsApp: 913083820</a>
+            <a href="https://wa.me/51938177206" target="_blank" rel="noreferrer">WhatsApp: 938177206</a>
+            <a href="mailto:hello@alaia.ai">hello@alaia.ai</a>
           </div>
         </div>
       </div>
